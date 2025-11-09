@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for section navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth header background and shadow transitions */
+header {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light & Dark theme variables and sensible defaults */
+@layer base {
+  :root {
+    /* LIGHT MODE (defaults) */
+    --bg: #ffffff;          /* page background */
+    --surface: #f8fafc;     /* section surfaces */
+    --card-bg: #ffffff;     /* card background */
+    --text: #111827;        /* main text */
+    --muted-text: #374151;  /* secondary text */
+    --border: #e6e9ee;      /* subtle border */
+  }
+
+  .dark {
+    /* DARK MODE (standard professional palette) */
+    --bg: #121212;          /* page background */
+    --surface: #1e1e1e;     /* section surfaces */
+    --card-bg: #1a1a1a;     /* card background (slightly lighter than page) */
+    --text: #e5e7eb;        /* primary text (soft white) */
+    --muted-text: #9ca3af;  /* secondary text */
+    --border: #2a2a2a;      /* dark border */
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Utility defaults for elements that might not use Tailwind classes */
+  a { color: inherit; }
+}
+
+/* Optional small global color transitions for polish (keeps UI smooth) */
+:root, .dark {
+  --ui-transition: 200ms;
+}
+* {
+  transition: background-color var(--ui-transition) ease, color var(--ui-transition) ease, border-color var(--ui-transition) ease;
+}
