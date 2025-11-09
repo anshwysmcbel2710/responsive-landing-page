@@ -15,21 +15,27 @@ const Footer = () => (
       {/* Social Links */}
       <div className="flex gap-4 mt-3 md:mt-0">
         <a
-          href="#"
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
           aria-label="LinkedIn"
         >
           LinkedIn
         </a>
         <a
-          href="#"
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
           aria-label="Twitter"
         >
           Twitter
         </a>
         <a
-          href="#"
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
           aria-label="GitHub"
         >
@@ -40,4 +46,4 @@ const Footer = () => (
   </AnimatedSection>
 );
 
-export default Footer;
+export default Footer; 
